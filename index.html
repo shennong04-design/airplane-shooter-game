@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>星空打飞机小游戏</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hero">
+      <p class="eyebrow">HTML5 Canvas Arcade</p>
+      <h1>星空打飞机</h1>
+      <p class="subtitle">躲避敌机、拾取能量、挑战更高分数。支持电脑键盘和手机触控。</p>
+    </section>
+
+    <section class="hud" aria-label="游戏状态">
+      <div class="hud-card">
+        <span>分数</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="hud-card">
+        <span>最高分</span>
+        <strong id="bestScore">0</strong>
+      </div>
+      <div class="hud-card">
+        <span>生命</span>
+        <strong id="lives">3</strong>
+      </div>
+      <div class="hud-card">
+        <span>关卡</span>
+        <strong id="level">1</strong>
+      </div>
+    </section>
+
+    <section class="stage-wrap">
+      <canvas id="gameCanvas" width="900" height="640" aria-label="打飞机游戏画布"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <h2 id="overlayTitle">准备起飞</h2>
+          <p id="overlayText">方向键 / WASD 移动，空格发射；手机可拖动飞机，点击屏幕射击。</p>
+          <button id="startBtn" type="button">开始游戏</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div>
+        <h2>操作方式</h2>
+        <p>电脑：WASD / 方向键移动，空格或鼠标点击发射，P 暂停。</p>
+        <p>手机：手指拖动飞机，点击或长按屏幕射击。</p>
+      </div>
+      <div>
+        <h2>道具说明</h2>
+        <p>蓝色能量：三连发；绿色能量：快速射击；金色能量：护盾。</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
